@@ -1,1 +1,6 @@
 <h1>Show Grocery List</h1>
+<ul>
+     <% @list.grocery_list_items.each do |item| %>
+        <li>name: <%= item.name %> | quantity:  <%= item.quantity %></li>
+    <% end %>
+</ul>

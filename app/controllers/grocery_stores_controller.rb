@@ -1,8 +1,8 @@
 class GroceryStoresController < ApplicationController
 
     def show
-        binding.pry
-        # @store = GroceryStore.find_by_id()
+        params.permit(:id)
+        @store = GroceryStore.find_by_id(params[:id])
     end
 
 end

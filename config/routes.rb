@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :ingredients, only: [:index]
-  resources :grocery_stores, only: [:show]
+  resources :grocery_stores, only: [:show] 
   resources :pantry, only: [:show]
   resources :recipes # should need all of these routes - nest within user
   resources :grocery_lists, only: [:show] # will want to attach user to this and nest

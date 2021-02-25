@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
 
     def index
+        @recipes = Recipe.all
     end
 
     def new
@@ -10,6 +11,8 @@ class RecipesController < ApplicationController
     end
 
     def show
+        params.permit(:id)
+        @recipe = Recipe.find_by_id(params[:id])
     end
 
     def edit
