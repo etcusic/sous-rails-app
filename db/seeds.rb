@@ -35,23 +35,37 @@ Ingredient.create(id: 15, name: "rice")
 
 GroceryStore.create(id: 1, name: "The Grocery Store")
 
-GroceryStoreItem.create(id: 1, name: "green bell pepper")
-GroceryStoreItem.create(id: 2, name: "red bell pepper")
-GroceryStoreItem.create(id: 3, name: "white onion")
-GroceryStoreItem.create(id: 4, name: "red onion")
-GroceryStoreItem.create(id: 5, name: "yellow onion")
-GroceryStoreItem.create(id: 6, name: "cucumber")
-GroceryStoreItem.create(id: 7, name: "spinach")
-GroceryStoreItem.create(id: 8, name: "tomato")
-GroceryStoreItem.create(id: 9, name: "celery")
-GroceryStoreItem.create(id: 10, name: "carrot")
-GroceryStoreItem.create(id: 11, name: "garlic")
-GroceryStoreItem.create(id: 12, name: "mushroom")
-GroceryStoreItem.create(id: 13, name: "zucchini")
-GroceryStoreItem.create(id: 14, name: "chicken")
-GroceryStoreItem.create(id: 15, name: "rice")
+GroceryStoreItem.create(id: 1, name: "green bell pepper", price: 1, quantity: 1, unit: "ounce", ingredient: 1, grocery_store_id: 1)
+GroceryStoreItem.create(id: 2, name: "red bell pepper", price: 1, quantity: 1, unit: "ounce", ingredient: 2, grocery_store_id: 1)
+GroceryStoreItem.create(id: 3, name: "white onion", price: 1, quantity: 1, unit: "ounce", ingredient: 3, grocery_store_id: 1)
+GroceryStoreItem.create(id: 4, name: "red onion", price: 1, quantity: 1, unit: "ounce", ingredient: 4, grocery_store_id: 1)
+GroceryStoreItem.create(id: 5, name: "yellow onion", price: 1, quantity: 1, unit: "ounce", ingredient: 5, grocery_store_id: 1)
+GroceryStoreItem.create(id: 6, name: "cucumber", price: 1, quantity: 1, unit: "ounce", ingredient: 6, grocery_store_id: 1)
+GroceryStoreItem.create(id: 7, name: "spinach", price: 1, quantity: 1, unit: "ounce", ingredient: 7, grocery_store_id: 1)
+GroceryStoreItem.create(id: 8, name: "tomato", price: 1, quantity: 1, unit: "ounce", ingredient: 8, grocery_store_id: 1)
+GroceryStoreItem.create(id: 9, name: "celery", price: 1, quantity: 1, unit: "ounce", ingredient: 9, grocery_store_id: 1)
+GroceryStoreItem.create(id: 10, name: "carrot", price: 1, quantity: 1, unit: "ounce", ingredient: 10, grocery_store_id: 1)
+GroceryStoreItem.create(id: 11, name: "garlic", price: 1, quantity: 1, unit: "ounce", ingredient: 11, grocery_store_id: 1)
+GroceryStoreItem.create(id: 12, name: "mushroom", price: 1, quantity: 1, unit: "ounce", ingredient: 12, grocery_store_id: 1)
+GroceryStoreItem.create(id: 13, name: "zucchini", price: 1, quantity: 1, unit: "ounce", ingredient: 13, grocery_store_id: 1)
+GroceryStoreItem.create(id: 14, name: "chicken", price: 1, quantity: 1, unit: "ounce", ingredient: 14, grocery_store_id: 1)
+GroceryStoreItem.create(id: 15, name: "rice", price: 1, quantity: 1, unit: "ounce", ingredient: 15, grocery_store_id: 1)
 
-Pantry.create(id: 1, )
+Pantry.create(id: 1, name: "My Pantry")
+
+3.times do |i|
+    Recipe.create(
+        id: (i + 1),
+        title: "Recipe # #{i + 1}"
+        portions: 1,
+        instructions: "Cook rice. Cook chicken. Cut veggies and wrist twist em like it's stir-fry"
+    )
+end
+
+# Recipe #1
+
+
+
 # Ingredient.create(id: 16, name: "")
 # Ingredient.create(id: 17, name: "")
 # Ingredient.create(id: 18, name: "")
