@@ -30,8 +30,10 @@ Ingredient.create(id: 10, name: "carrot")
 Ingredient.create(id: 11, name: "garlic")
 Ingredient.create(id: 12, name: "mushroom")
 Ingredient.create(id: 13, name: "zucchini")
-# Ingredient.create(id: 14, name: "")
-# Ingredient.create(id: 15, name: "")
+Ingredient.create(id: 14, name: "chicken")
+Ingredient.create(id: 15, name: "rice")
+
+
 # Ingredient.create(id: 16, name: "")
 # Ingredient.create(id: 17, name: "")
 # Ingredient.create(id: 18, name: "")
