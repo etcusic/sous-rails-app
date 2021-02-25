@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_145424) do
+ActiveRecord::Schema.define(version: 2021_02_25_202711) do
 
   create_table "grocery_list_items", force: :cascade do |t|
     t.integer "grocery_list_id", null: false
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_145424) do
   create_table "pantries", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "pantry_items", force: :cascade do |t|
