@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_202711) do
+ActiveRecord::Schema.define(version: 2021_02_25_210948) do
 
   create_table "grocery_list_items", force: :cascade do |t|
     t.integer "grocery_list_id", null: false
     t.integer "ingredient"
     t.integer "grocery_store"
-    t.integer "quantity"
+    t.float "quantity"
     t.string "unit"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_202711) do
   create_table "grocery_store_items", force: :cascade do |t|
     t.integer "grocery_store_id", null: false
     t.integer "ingredient"
-    t.integer "price"
-    t.integer "quantity"
+    t.float "price"
+    t.float "quantity"
     t.string "unit"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_202711) do
   create_table "pantry_items", force: :cascade do |t|
     t.integer "pantry_id", null: false
     t.integer "ingredient"
-    t.integer "quantity"
+    t.float "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["pantry_id"], name: "index_pantry_items_on_pantry_id"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_202711) do
   create_table "recipe_items", force: :cascade do |t|
     t.integer "recipe_id", null: false
     t.integer "ingredient"
-    t.integer "quantity"
+    t.float "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipe_id"], name: "index_recipe_items_on_recipe_id"
