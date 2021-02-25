@@ -15,7 +15,14 @@
 # set up user ?? => pantry & grocery_list belongs_to user
 # recipe can belong to user as well. Another user can create a copy to have/edit with original_recipe id to be able reference
 
-# delete all previous here
+
+Ingredient.delete_all
+GroceryStore.delete_all
+GroceryStoreItem.delete_all
+Pantry.delete_all
+Recipe.delete_all
+RecipeItem.delete_all
+
 
 Ingredient.create(id: 1, name: "green bell pepper")
 Ingredient.create(id: 2, name: "red bell pepper")
@@ -35,36 +42,56 @@ Ingredient.create(id: 15, name: "rice")
 
 GroceryStore.create(id: 1, name: "The Grocery Store")
 
-GroceryStoreItem.create(id: 1, name: "green bell pepper", price: 1, quantity: 1, unit: "ounce", ingredient: 1, grocery_store_id: 1)
-GroceryStoreItem.create(id: 2, name: "red bell pepper", price: 1, quantity: 1, unit: "ounce", ingredient: 2, grocery_store_id: 1)
-GroceryStoreItem.create(id: 3, name: "white onion", price: 1, quantity: 1, unit: "ounce", ingredient: 3, grocery_store_id: 1)
-GroceryStoreItem.create(id: 4, name: "red onion", price: 1, quantity: 1, unit: "ounce", ingredient: 4, grocery_store_id: 1)
-GroceryStoreItem.create(id: 5, name: "yellow onion", price: 1, quantity: 1, unit: "ounce", ingredient: 5, grocery_store_id: 1)
-GroceryStoreItem.create(id: 6, name: "cucumber", price: 1, quantity: 1, unit: "ounce", ingredient: 6, grocery_store_id: 1)
-GroceryStoreItem.create(id: 7, name: "spinach", price: 1, quantity: 1, unit: "ounce", ingredient: 7, grocery_store_id: 1)
-GroceryStoreItem.create(id: 8, name: "tomato", price: 1, quantity: 1, unit: "ounce", ingredient: 8, grocery_store_id: 1)
-GroceryStoreItem.create(id: 9, name: "celery", price: 1, quantity: 1, unit: "ounce", ingredient: 9, grocery_store_id: 1)
-GroceryStoreItem.create(id: 10, name: "carrot", price: 1, quantity: 1, unit: "ounce", ingredient: 10, grocery_store_id: 1)
-GroceryStoreItem.create(id: 11, name: "garlic", price: 1, quantity: 1, unit: "ounce", ingredient: 11, grocery_store_id: 1)
-GroceryStoreItem.create(id: 12, name: "mushroom", price: 1, quantity: 1, unit: "ounce", ingredient: 12, grocery_store_id: 1)
-GroceryStoreItem.create(id: 13, name: "zucchini", price: 1, quantity: 1, unit: "ounce", ingredient: 13, grocery_store_id: 1)
-GroceryStoreItem.create(id: 14, name: "chicken", price: 1, quantity: 1, unit: "ounce", ingredient: 14, grocery_store_id: 1)
-GroceryStoreItem.create(id: 15, name: "rice", price: 1, quantity: 1, unit: "ounce", ingredient: 15, grocery_store_id: 1)
+GroceryStoreItem.create(id: 1, price: 1, quantity: 1, unit: "ounce", ingredient: 1, grocery_store_id: 1)
+GroceryStoreItem.create(id: 2, price: 1, quantity: 1, unit: "ounce", ingredient: 2, grocery_store_id: 1)
+GroceryStoreItem.create(id: 3, price: 1, quantity: 1, unit: "ounce", ingredient: 3, grocery_store_id: 1)
+GroceryStoreItem.create(id: 4, price: 1, quantity: 1, unit: "ounce", ingredient: 4, grocery_store_id: 1)
+GroceryStoreItem.create(id: 5, price: 1, quantity: 1, unit: "ounce", ingredient: 5, grocery_store_id: 1)
+GroceryStoreItem.create(id: 6, price: 1, quantity: 1, unit: "ounce", ingredient: 6, grocery_store_id: 1)
+GroceryStoreItem.create(id: 7, price: 1, quantity: 1, unit: "ounce", ingredient: 7, grocery_store_id: 1)
+GroceryStoreItem.create(id: 8, price: 1, quantity: 1, unit: "ounce", ingredient: 8, grocery_store_id: 1)
+GroceryStoreItem.create(id: 9, price: 1, quantity: 1, unit: "ounce", ingredient: 9, grocery_store_id: 1)
+GroceryStoreItem.create(id: 10, price: 1, quantity: 1, unit: "ounce", ingredient: 10, grocery_store_id: 1)
+GroceryStoreItem.create(id: 11, price: 1, quantity: 1, unit: "ounce", ingredient: 11, grocery_store_id: 1)
+GroceryStoreItem.create(id: 12, price: 1, quantity: 1, unit: "ounce", ingredient: 12, grocery_store_id: 1)
+GroceryStoreItem.create(id: 13, price: 1, quantity: 1, unit: "ounce", ingredient: 13, grocery_store_id: 1)
+GroceryStoreItem.create(id: 14, price: 1, quantity: 1, unit: "ounce", ingredient: 14, grocery_store_id: 1)
+GroceryStoreItem.create(id: 15, price: 1, quantity: 1, unit: "ounce", ingredient: 15, grocery_store_id: 1)
 
 Pantry.create(id: 1, name: "My Pantry")
 
 3.times do |i|
     Recipe.create(
         id: (i + 1),
-        title: "Recipe # #{i + 1}"
+        title: "Recipe # #{i + 1}",
         portions: 1,
         instructions: "Cook rice. Cook chicken. Cut veggies and wrist twist em like it's stir-fry"
     )
 end
 
-# Recipe #1
+# Recipe #1 - unstuffed peppers
+RecipeItem.create(id: 1, recipe_id: 1, ingredient: 1, quantity: 1)
+RecipeItem.create(id: 2, recipe_id: 1, ingredient: 2, quantity: 1)
+RecipeItem.create(id: 3, recipe_id: 1, ingredient: 4, quantity: 1)
+RecipeItem.create(id: 4, recipe_id: 1, ingredient: 11, quantity: 1)
+RecipeItem.create(id: 5, recipe_id: 1, ingredient: 15, quantity: 1)
+RecipeItem.create(id: 6, recipe_id: 1, ingredient: 15, quantity: 1)
 
+# Recipe #2 - zuc and mushroom stir fry
+RecipeItem.create(id: 7, recipe_id: 1, ingredient: 12, quantity: 1)
+RecipeItem.create(id: 8, recipe_id: 1, ingredient: 13, quantity: 1)
+RecipeItem.create(id: 9, recipe_id: 1, ingredient: 14, quantity: 1)
+RecipeItem.create(id: 10, recipe_id: 1, ingredient: 15, quantity: 1)
+RecipeItem.create(id: 11, recipe_id: 1, ingredient: 10, quantity: 1)
+RecipeItem.create(id: 12, recipe_id: 1, ingredient: 3, quantity: 1)
 
+# Recipe #3 - thai stir fry
+RecipeItem.create(id: 13, recipe_id: 1, ingredient: 15, quantity: 1)
+RecipeItem.create(id: 14, recipe_id: 1, ingredient: 14, quantity: 1)
+RecipeItem.create(id: 15, recipe_id: 1, ingredient: 8, quantity: 1)
+RecipeItem.create(id: 16, recipe_id: 1, ingredient: 11, quantity: 1)
+RecipeItem.create(id: 17, recipe_id: 1, ingredient: 5, quantity: 1)
+RecipeItem.create(id: 18, recipe_id: 1, ingredient: 1, quantity: 1)
 
 # Ingredient.create(id: 16, name: "")
 # Ingredient.create(id: 17, name: "")
