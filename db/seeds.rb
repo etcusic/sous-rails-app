@@ -17,11 +17,11 @@
 
 
 Ingredient.delete_all
-GroceryStore.delete_all
 GroceryStoreItem.delete_all
+RecipeItem.delete_all
+GroceryStore.delete_all
 Pantry.delete_all
 Recipe.delete_all
-RecipeItem.delete_all
 
 
 Ingredient.create(id: 1, name: "green bell pepper")
@@ -70,28 +70,28 @@ Pantry.create(id: 1, name: "My Pantry")
 end
 
 # Recipe #1 - unstuffed peppers
-RecipeItem.create(id: 1, recipe_id: 1, ingredient: 1, quantity: 1)
-RecipeItem.create(id: 2, recipe_id: 1, ingredient: 2, quantity: 1)
-RecipeItem.create(id: 3, recipe_id: 1, ingredient: 4, quantity: 1)
-RecipeItem.create(id: 4, recipe_id: 1, ingredient: 11, quantity: 1)
-RecipeItem.create(id: 5, recipe_id: 1, ingredient: 15, quantity: 1)
-RecipeItem.create(id: 6, recipe_id: 1, ingredient: 15, quantity: 1)
+RecipeItem.create(id: 1, recipe_id: 1, ingredient: "green bell pepper", quantity: 1)
+RecipeItem.create(id: 2, recipe_id: 1, ingredient: "red bell pepper", quantity: 1)
+RecipeItem.create(id: 3, recipe_id: 1, ingredient: "red onion", quantity: 1)
+RecipeItem.create(id: 4, recipe_id: 1, ingredient: "garlic", quantity: 1)
+RecipeItem.create(id: 5, recipe_id: 1, ingredient: "chicken", quantity: 1)
+RecipeItem.create(id: 6, recipe_id: 1, ingredient: "rice", quantity: 1)
 
 # Recipe #2 - zuc and mushroom stir fry
-RecipeItem.create(id: 7, recipe_id: 1, ingredient: 12, quantity: 1)
-RecipeItem.create(id: 8, recipe_id: 1, ingredient: 13, quantity: 1)
-RecipeItem.create(id: 9, recipe_id: 1, ingredient: 14, quantity: 1)
-RecipeItem.create(id: 10, recipe_id: 1, ingredient: 15, quantity: 1)
-RecipeItem.create(id: 11, recipe_id: 1, ingredient: 10, quantity: 1)
-RecipeItem.create(id: 12, recipe_id: 1, ingredient: 3, quantity: 1)
+RecipeItem.create(id: 7, recipe_id: 2, ingredient: "zucchini", quantity: 1)
+RecipeItem.create(id: 8, recipe_id: 2, ingredient: "mushroom", quantity: 1)
+RecipeItem.create(id: 9, recipe_id: 2, ingredient: "chicken", quantity: 1)
+RecipeItem.create(id: 10, recipe_id: 2, ingredient: "rice", quantity: 1)
+RecipeItem.create(id: 11, recipe_id: 2, ingredient: "carrot", quantity: 1)
+RecipeItem.create(id: 12, recipe_id: 2, ingredient: "white onion", quantity: 1)
 
 # Recipe #3 - thai stir fry
-RecipeItem.create(id: 13, recipe_id: 1, ingredient: 15, quantity: 1)
-RecipeItem.create(id: 14, recipe_id: 1, ingredient: 14, quantity: 1)
-RecipeItem.create(id: 15, recipe_id: 1, ingredient: 8, quantity: 1)
-RecipeItem.create(id: 16, recipe_id: 1, ingredient: 11, quantity: 1)
-RecipeItem.create(id: 17, recipe_id: 1, ingredient: 5, quantity: 1)
-RecipeItem.create(id: 18, recipe_id: 1, ingredient: 1, quantity: 1)
+RecipeItem.create(id: 13, recipe_id: 3, ingredient: "rice", quantity: 1)
+RecipeItem.create(id: 14, recipe_id: 3, ingredient: "chicken", quantity: 1)
+RecipeItem.create(id: 15, recipe_id: 3, ingredient: "tomato", quantity: 1)
+RecipeItem.create(id: 16, recipe_id: 3, ingredient: "garlic", quantity: 1)
+RecipeItem.create(id: 17, recipe_id: 3, ingredient: "yellow onion", quantity: 1)
+RecipeItem.create(id: 18, recipe_id: 3, ingredient: "green bell pepper", quantity: 1)
 
 # Ingredient.create(id: 16, name: "")
 # Ingredient.create(id: 17, name: "")

@@ -1,7 +1,7 @@
 <h1>Show Recipe</h1>
-<h2><%= @recipe.name %></h2>
+<h2><%= @recipe.title %></h2>
 <ul>
      <% @recipe.recipe_items.each do |item| %>
-        <li>name: <%= item.name %> | quantity: <%= item.quantity %></li>
+        <li>name: <%= item.ingredient %> | quantity: <%= item.quantity %></li>
     <% end %>
 </ul>

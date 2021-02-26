@@ -1,9 +1,4 @@
 <h1>Recipe Index</h1>
 <% @recipes.each do |recipe| %>
-    <h2><%= recipe.name %></h2>
-    <ul>
-    <% recipe.recipe_items.each do |item| %>
-        <li>name: <%= item.name %> | quantity: <%= item.quantity %></li>
-    <% end %>
-    </ul>
+    <h2><%= link_to "#{recipe.title} | #{recipe.portions} portions", recipe_path(recipe) %></h2>
 <% end %>
